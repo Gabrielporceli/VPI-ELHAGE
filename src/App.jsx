@@ -265,21 +265,19 @@ const App = () => {
                 "Vim por indicação de um amigo, cheguei sem muitas expectativas. O atendimento foi um grande diferencial esses meninos são outro nível. Parecia que já conheciam a minha empresa antes da primeira conversa."
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                <div style={{
-                  width: '44px',
-                  height: '44px',
-                  borderRadius: '50%',
-                  background: 'rgba(119, 88, 219, 0.12)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#7758DB',
-                  fontSize: '14px',
-                  fontWeight: 500,
-                }}>MR</div>
+                <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" 
+                  alt="Marcos Ribeiro" 
+                  style={{
+                    width: '44px',
+                    height: '44px',
+                    borderRadius: '50%',
+                    objectFit: 'cover'
+                  }} 
+                />
                 <div>
                   <div style={{ fontSize: '14px', fontWeight: 500 }}>Marcos Ribeiro</div>
-                  <div style={{ fontSize: '12px', color: '#6A6A60' }}>Empresário, cliente desde 2023</div>
+                  <div style={{ fontSize: '12px', color: '#6A6A60' }}>Empresário, cliente desde 2024</div>
                 </div>
               </div>
             </div>
