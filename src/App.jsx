@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import logo from './assets/logo.png';
 import { FlickeringGridDemo } from './components/ui/demo.jsx';
 
-const INDICADOR = 'template';
+const INDICADOR = 'Taynara';
 const WEBHOOK_URL = 'https://webhook.gabrielporceli.com.br/webhook/iNDICACAO';
 
 const App = () => {
@@ -22,10 +22,10 @@ const App = () => {
   ];
 
   const STATS = [
-    { prefix: '',  value: 94,  suffix: '%',  label: 'clientes satisfeitos' },
-    { prefix: '',  value: 3,   suffix: 'x',  label: 'crescimento médio' },
-    { prefix: '+', value: 200, suffix: '',   label: 'projetos entregues' },
-    { prefix: '',  value: 4.9, suffix: '★',  label: 'avaliação média' },
+    { prefix: '', value: 94, suffix: '%', label: 'clientes satisfeitos' },
+    { prefix: '', value: 3, suffix: 'x', label: 'crescimento médio' },
+    { prefix: '+', value: 200, suffix: '', label: 'projetos entregues' },
+    { prefix: '', value: 4.9, suffix: '★', label: 'avaliação média' },
   ];
   const [counts, setCounts] = useState(STATS.map(() => 0));
   const proofRef = useRef(null);
@@ -109,7 +109,7 @@ const App = () => {
       const backlog = JSON.parse(localStorage.getItem('vpi_backlog') || '[]');
       backlog.push(payload);
       localStorage.setItem('vpi_backlog', JSON.stringify(backlog));
-    } catch (_) {}
+    } catch (_) { }
 
     // Tenta enviar com até 3 tentativas
     let success = false;
@@ -121,7 +121,7 @@ const App = () => {
           body: JSON.stringify(payload),
         });
         if (res.ok) { success = true; break; }
-      } catch (_) {}
+      } catch (_) { }
       if (attempt < 2) await new Promise(r => setTimeout(r, 1500));
     }
 
@@ -139,8 +139,8 @@ const App = () => {
       {/* NAV */}
       <nav className="nav" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <img src={logo} alt="Logo" className="nav-logo" style={{ width: '36px', height: '36px', objectFit: 'contain', borderRadius: 0, backgroundColor: 'transparent' }} />
-        <button 
-          className="btn-primary" 
+        <button
+          className="btn-primary"
           style={{ width: 'auto', padding: '10px 24px', fontSize: '13px', margin: 0, color: '#7758DB' }}
           onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
         >
@@ -363,7 +363,7 @@ const App = () => {
                           width="16" height="16" viewBox="0 0 16 16" fill="none"
                           style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.25s ease', flexShrink: 0 }}
                         >
-                          <path d="M4 6l4 4 4-4" stroke="#6A6A60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                          <path d="M4 6l4 4 4-4" stroke="#6A6A60" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </button>
 
@@ -412,7 +412,7 @@ const App = () => {
                               >
                                 {form.segment === seg && (
                                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                    <path d="M2 6l3 3 5-5" stroke="#7758DB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M2 6l3 3 5-5" stroke="#7758DB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                   </svg>
                                 )}
                                 {form.segment !== seg && <span style={{ width: '12px', display: 'inline-block' }} />}
