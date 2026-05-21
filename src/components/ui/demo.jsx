@@ -1,5 +1,5 @@
 import { FlickeringGrid } from "./flickering-grid-hero";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo-white.png";
 
 const maskStyle = {
   WebkitMaskImage: `url('${logo}')`,
@@ -14,14 +14,14 @@ const maskStyle = {
 
 const GRID_CONFIG = {
   background: {
-    color: "#7758DB",
+    color: "#6829c0",
     maxOpacity: 0.15,
     flickerChance: 0.12,
     squareSize: 4,
     gridGap: 4,
   },
   logo: {
-    color: "#7758DB",
+    color: "#6829c0",
     maxOpacity: 0.65,
     flickerChance: 0.18,
     squareSize: 3,

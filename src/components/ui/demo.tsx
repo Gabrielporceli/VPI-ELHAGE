@@ -15,14 +15,14 @@ const maskStyle = {
 // 定义网格动画颜色和配置
 const GRID_CONFIG = {
   background: {
-    color: "#7758DB", // Adapted to match Growth Hub brand color
+    color: "#6829c0", // Adapted to match Growth Hub brand color
     maxOpacity: 0.15,
     flickerChance: 0.12,
     squareSize: 4,
     gridGap: 4,
   },
   logo: {
-    color: "#7758DB",
+    color: "#6829c0",
     maxOpacity: 0.65,
     flickerChance: 0.18,
     squareSize: 3,
